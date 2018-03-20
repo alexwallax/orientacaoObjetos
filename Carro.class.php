@@ -1,13 +1,24 @@
 <?php
 
 class Carro {
-
+    // atributos
     private $modelo;
     private $cor;
     private $velocidadeAtual;
     private $velocidadeMaxima;
+    
+    /* construtor */
+    public function __construct($modelo, $cor) {
+        $this->modelo = $modelo;
+        $this->cor = $cor;
+    }
+    
+    //Métodos
+    public function pegaCor() {
+        return $this->cor;
+    }
 
-    public function colocarVlelocidade($velocidadeAtual) {
+    public function colocarVlelocidadeAtual($velocidadeAtual) {
         if ($velocidadeAtual < 0) {
             echo "Velocidade não pode ser negativa";
         } elseif ($velocidadeAtual % 10 != 0) {
